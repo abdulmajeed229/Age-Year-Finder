@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    body{
+      background-color: rgb(52, 40, 122);
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box{
+      height: 300px;
+      width: 300px;
+      background-color: rgba(73, 119, 247, 0.658);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    input[type='text']{
+
+      height: 35px;
+      width: 90%;
+      margin-top: 10px;
+      padding-left: 10px;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+    }
+    button{
+      height: 30px;
+      width: 90px;
+      margin-top: 40px;
+      border-radius: 5px;
+      border: none;
+    }
+    h1{
+      color: white;
+      font-family: cursive;
+    }
+    h2{
+      color: white;
+      font-family: cursive;
+    }
+  </style>
+
+  <div class="box">
+
+    <h1>Age Year Finder</h1>
+
+    <input type="text" id="input" placeholder="Enter Your Age">
+
+    <button id="btn" onclick="foo()">Check</button>
+
+    <h2 id="text">0</h2>
+
+  </div>
+
+
+
+  <script>
+
+
+
+function foo(){
+
+  let user = document.getElementById('input').value ;
+let today = new Date().getFullYear();
+
+let mix = today - user ;
+
+document.getElementById('text').innerText = ' Your Birth year is '+ mix ;
+ 
+}
+  </script>
+  
+</body>
+</html>
